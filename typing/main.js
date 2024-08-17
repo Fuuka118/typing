@@ -83,6 +83,10 @@ const rankCheck = score => {
 
 const gameOver = id => {
    clearInterval(id);
+
+   const gameOverText =['タイムアップ！'];
+   untypedfield.textContent = gameOverText;
+   setTimeout(gameOverText,500)
  
   //  console.log('ゲーム終了!');
    const result = confirm(rankCheck(score));
