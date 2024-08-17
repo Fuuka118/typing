@@ -56,6 +56,7 @@ const keyPress = e => {
   untyped = untyped.substring(1);
   typedfield.textContent = typed;
   untypedfield.textContent = untyped;
+  number.textContent = score;
 
   if(untyped === '') {
     createText();
@@ -107,12 +108,6 @@ const timer = () => {
   }, 1000);
 };
 
-const keyPressText = e => {
-
-  score++;
-
-};
-
 start.addEventListener('click', () => {
 
   timer();
@@ -123,7 +118,6 @@ start.addEventListener('click', () => {
 
   document.addEventListener('keypress', keyPress);
 
-  document.addEventListener('keypress', keyPressText);
 });
 
 untypedfield.textContent = 'スタートボタンで開始';
